@@ -11,7 +11,7 @@ S = (xmax - xmin) * (ymax - ymin)
 xgr, ygr = [], []
 xre, yre = [], []
 
-#@njit
+@njit
 def mk():
     counter = []
     for i in range(N):
@@ -28,12 +28,3 @@ start = time.time()
 integral = mk()
 print(time.time() - start)
 print('приближенное значение интеграла:', integral[0])
-
-"""
-
-    Я не понимаю по какой причине скорость работы без numba практически в 1.5 раза быстрее, нежели с ней.. может, я чего-то не так делаю
-    
-    На 50000 с numba ~0.7
-    На 50000 без numba ~0.4
-    
-"""
