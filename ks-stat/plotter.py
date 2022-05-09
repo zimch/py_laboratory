@@ -16,4 +16,4 @@ plt.show()
 
 d1 = df11['df1']
 
-print(stats.kstest(d1, 'norm', (d1.mean(), d1.std()), N=3))
+print(stats.kstest(d1, 'norm', (d1.mean(), d1.std()), N=5000))
